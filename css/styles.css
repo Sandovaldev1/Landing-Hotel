@@ -1,0 +1,464 @@
+:root {
+    --header-font: 'Roboto', sans-serif; /* Fuente para encabezados */
+    --paragraph-font: 'Open Sans', sans-serif; /* Fuente para párrafos */
+    --body-bg-color: #f4f4f4;
+    --hero-bg-color: rgba(0, 0, 0, 0.582);
+    --booking-btn-bg-color: #ff9800;
+    --booking-btn-hover-bg-color: #e68900;
+    --nav-link-color: #fff;
+    --nav-link-hover-color: #bd262a;
+    --scroll-nav-link-color: #000;
+    --scroll-nav-link-hover-color: #bd262a;
+    --center-button-bg-color: #ca5c5c;
+    --exclusive-bg-color: #f9f9f9;
+    --btn-bg-color: #007BFF;
+    --btn-hover-bg-color: #0056b3;
+    --about-us-bg-color: #31363b;
+    --newsletter-bg-color: #2c3235;
+    --newsletter-btn-bg-color: #ff7f50;
+    --newsletter-btn-hover-bg-color: #e76f51;
+    --social-link-color: #007bff;
+    --social-media-bg-color: #f8f9fa;
+}
+
+/* General body settings */
+body {
+    font-family: var(--paragraph-font);
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-bg-color);
+}
+
+/* Hero Section (Header) */
+.hero {
+    background-image: url('../img/descuento.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    background-color: var(--hero-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; /* Ajustar ancho para pantallas pequeñas */
+    max-width: 900px; /* Maximo ancho del formulario */
+    margin-top: 550px;
+}
+
+.hero h1 {
+    font-size: 3rem; /* 48px */
+    margin-bottom: 0.625rem; /* 10px */
+    font-family: var(--header-font);
+}
+
+.hero p {
+    font-size: 1.125rem; /* 18px */
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+/* Booking Form */
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem; /* 10px */
+}
+
+.booking-form label {
+    font-size: 1rem; /* 16px */
+}
+
+.booking-form input,
+.booking-form button {
+    padding: 0.625rem; /* 10px */
+    font-size: 1rem; /* 16px */
+    border-radius: 0.3125rem; /* 5px */
+    border: none;
+}
+
+.booking-form input {
+    width: 100%; /* Asegurar que los inputs ocupen todo el ancho disponible */
+}
+
+.booking-form button {
+    background-color: var(--booking-btn-bg-color);
+    color: white;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background-color: var(--booking-btn-hover-bg-color);
+}
+
+/* Destinos Section */
+.title-places {
+    margin-top: 60px;
+    text-align: left;
+    font-size: 30px;
+    font-family: var(--header-font);
+}
+
+.destinos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.destino-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.destino-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.destino-item:hover img {
+    transform: scale(1.1);
+}
+
+.destino-label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+}
+
+.grande {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* Navbar Styles */
+.navigation-wrap {
+    position: absolute; /* Cambiado a absolute para que se superponga sobre el hero */
+    top: 0; /* Para que se mantenga en la parte superior del hero */
+    width: 100%;
+    z-index: 2;
+    transition: all 0.3s ease-out;
+}
+
+.navbar {
+    background-color: transparent; /* Fondo transparente para que coincida con el hero */
+    padding: 20px 10px; /* Espaciado interno del navbar */
+}
+
+.navbar-brand img {
+    width: 50px; /* Tamaño del logo */
+}
+
+.navbar-toggler {
+    border: none; /* Sin borde en el botón de menú */
+}
+
+/* Cambiar color del icono del menú hamburguesa al hacer scroll */
+.navigation-wrap.scroll-on .navbar-toggler i {
+    color: var(--scroll-nav-link-color); /* Cambia a negro cuando se hace scroll */
+}
+
+.navbar-toggler i {
+    color: var(--nav-link-color); /* Color blanco en el menú hamburguesa en el hero */
+    font-size: 20px;
+}
+
+/* Quitamos estilos que trae por defecto al presionar el menú hamburguesa */
+.navbar-toggler:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.nav-link {
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: var(--nav-link-color); /* Texto en blanco en el hero */
+    margin: 0 10px;
+}
+
+.nav-link:hover {
+    color: var(--nav-link-hover-color); /* Cambia color al pasar el mouse */
+}
+
+/* Cuando está responsivo, se despliegan las opciones y las centramos */
+.navbar-collapse {
+    text-align: center; /* Centrar contenido del navbar en dispositivos pequeños */
+}
+
+.navigation-wrap.scroll-on {
+    position: fixed; /* Se queda fijo al hacer scroll */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09); /* Sombra al hacer scroll */
+    transition: all 0.15s ease-in-out;
+}
+
+.navigation-wrap.scroll-on .nav-link {
+    color: var(--scroll-nav-link-color); /* Cambia a negro cuando se hace scroll */
+}
+
+.navigation-wrap.scroll-on .nav-link:hover {
+    color: var(--scroll-nav-link-hover-color); /* Cambia a color de hover cuando se hace scroll */
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.center-button .btn {
+    font-size: 1.4rem;
+    background-color: var(--center-button-bg-color);
+    padding: 14px 250px;
+    font-size: large;
+}
+
+.exclusive-advantages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--exclusive-bg-color); /* Cambia según tu diseño */
+    border-radius: 8px; 
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 20px; /* Espacio entre el texto y la imagen */
+    min-width: 300px; /* Establece un ancho mínimo */
+    font-size: 20px;
+}
+
+.text-content h2 {
+    font-family: var(--header-font);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    margin-bottom: 15px;
+}
+
+.text-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.text-content li {
+    margin-bottom: 5px;
+}
+
+.btn {
+    background-color: var(--btn-bg-color); /* Color del botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover-bg-color); /* Color del botón al pasar el ratón */
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 300px; /* Establece un ancho mínimo para la imagen */
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+}
+
+.about-us {
+    margin-top: 40px;
+    padding: 40px 20px;
+    background-image: url('../img/bg-logo2018-riu.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--about-us-bg-color);
+    color: #fff;
+}
+
+.about-us h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-us h3 {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.about-us p {
+    font-size: 16px;
+    line-height: 1.6; /* Mejora la legibilidad */
+    margin-bottom: 15px;
+}
+
+.newsletter {
+    padding: 40px 20px;
+    background-color: var(--newsletter-bg-color);
+    color: white;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.newsletter h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.newsletter p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 250px; 
+    margin-right: 10px; /* Espaciado entre el input y el botón */
+}
+
+.newsletter button {
+    background-color: var(--newsletter-btn-bg-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.newsletter button:hover {
+    background-color: var(--newsletter-btn-hover-bg-color);
+}
+
+/* Social Media */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.social-media h2{
+    font-family: var(--header-font);
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: var(--social-link-color); /* Color de los enlaces de redes sociales */
+    font-size: 24px; /* Ajustar tamaño del icono */
+    text-decoration: none;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.whatsapp-icon:hover {
+    background-color: #128C7E;
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .destinos {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+    }
+
+    .exclusive-advantages {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .text-content {
+        padding-right: 0; 
+    }
+
+    .image-content {
+        justify-content: center; /* Centrar imagen */
+        margin-top: 20px; /* Espacio entre texto e imagen */
+    }
+
+    .hero h1 {
+        font-size: 32px; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+    .hero{
+        background-image: url('../img/riuportadamovil.jpg');
+    }
+    .hero-content {
+        max-width: 600px; /* Maximo ancho del formulario */
+        margin-top: 0;
+    }
+    .hero p {
+        font-size: 16px; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+
+    .booking-form input,
+    .booking-form button {
+        font-size: 14px; /* Tamaño de fuente más pequeño en formularios */
+    }
+    .text-content{
+        text-align: center;
+    }
+    .social-media h2{
+        margin-top: 20px;
+    }
+    .center-button .btn {
+        padding: 10px;
+    }
+    .exclusive-advantages ul {
+        list-style: none; /* Eliminar viñetas */
+        padding: 0; /* Eliminar relleno */
+        text-align: center; /* Centrar texto */
+    }
+
+    .exclusive-advantages li {
+        display: block; /* Asegurarse de que cada elemento ocupe toda la línea */
+        margin: 0.5rem 0; /* Espaciado vertical entre elementos */
+    }
+}

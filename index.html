@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation Hero</title>
+    <link rel="icon" href="/img/riulogo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/riulogo.png" alt="" class="img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="menú hamburguer">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="true" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nosotros">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#destinos">Destinos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div id="inicio" class="hero">
+        <div class="hero-content text-center">
+            <p>Disfruta de las mejores vacaciones con nosotros.</p>
+            <form class="booking-form">
+                <div class="form-row row">
+                    <div class="form-group col-md-4">
+                        <label for="checkin">Fecha de Entrada</label>
+                        <input type="date" id="checkin" name="checkin" class="form-control">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="checkout">Fecha de Salida</label>
+                        <input type="date" id="checkout" name="checkout" class="form-control">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="guests">Número de Huéspedes</label>
+                        <input type="number" id="guests" name="guests" class="form-control" min="1" max="10">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Buscar</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h4 class="title-places">Destinos más reservados</h4>
+    </div>
+
+    <!--Seccion destinos-->
+    <section id="destinos" class="container destinos">
+
+        <div class="destino-item grande">
+            <img src="./img/guanacaste.jpg" alt="Guanacaste">
+            <div class="destino-label">GUANACASTE</div>
+        </div>
+        <div class="destino-item">
+            <img src="./img/aruba.jpg" alt="Aruba Palm Beach">
+            <div class="destino-label">ARUBA PALM BEACH</div>
+        </div>
+        <div class="destino-item">
+            <img src="./img/cancun.jpg" alt="Cancún">
+            <div class="destino-label">CANCÚN</div>
+        </div>
+        <div class="destino-item">
+            <img src="./img/loscabos.jpg" alt="Los Cabos">
+            <div class="destino-label">LOS CABOS</div>
+        </div>
+        <div class="destino-item">
+            <img src="./img/miami.jpg" alt="Miami Beach">
+            <div class="destino-label">MIAMI BEACH</div>
+        </div>
+        <div class="destino-item">
+            <img src="./img/panama.jpg" alt="Ciudad de Panamá">
+            <div class="destino-label">CIUDAD DE PANAMÁ</div>
+        </div>
+        <div class="destino-item">
+            <img src="./img/paradise.jpg" alt="Paradise Island">
+            <div class="destino-label">PARADISE ISLAND</div>
+        </div>
+        <div class="destino-item">
+            <img src="./img/nuevayork.jpg" alt="Nueva York">
+            <div class="destino-label">NUEVA YORK</div>
+        </div>
+        <div class="destino-item">
+            <img src="./img/puntacana.jpg" alt="Punta Cana">
+            <div class="destino-label">PUNTA CANA</div>
+        </div>
+    </section>
+
+    <div class="container center-button">
+        <a href="#servicios" class="btn btn-primary">Reserva ahora</a>
+    </div>
+
+    <!--Seccion Carousel-->
+    <section class="container-fluid">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://www.riu.com/es/binpromo/Home_269929_tcm49-269930.gif?v=281118_1035" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/carouselimg2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/descuentoninos.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!--Seccion ventajas-->
+    <section class="container exclusive-advantages">
+        <div class="text-content">
+            <h2>Ventajas Exclusivas con Riu Class</h2>
+            <p>
+                Con el programa Riu Class serás cliente preferente y te premiaremos por tu fidelidad. Desde hoy mismo ya
+                puedes entrar a formar parte de Riu Class y disfrutar de beneficios y descuentos en exclusiva.
+            </p>
+            <ul>
+                <li>- Acumularás puntos</li>
+                <li>- Disfrutarás de ofertas especiales</li>
+                <li>- Gestionar mis reservas futuras</li>
+                <li>- Enviar deseos a los hoteles</li>
+                <li>- Ventajas exclusivas</li>
+            </ul>
+            <button class="btn">Únete Ahora</button>
+        </div>
+        <div class="image-content">
+            <img src="./img/riuclass.png" alt="Riu Class" />
+        </div>
+    </section>
+
+    <!--Seccion nosotros-->
+    <section id="nosotros" class="container-fluid about-us">
+        <div class="container">
+            <h2>¿Por qué elegirnos?</h2>
+            <h3>Experiencia y pasión por el servicio</h3>
+            <p>
+                RIU Hotels & Resorts es una cadena hotelera que nació en 1953 con un pequeño hotel en Playa de Palma,
+                España. Nuestros más de 60 años de experiencia cuidando a nuestros clientes en los mejores destinos del
+                mundo avalan el principal objetivo de la compañía: el bienestar de los huéspedes.
+            </p>
+            <p>
+                Cerca de 100 hoteles en 21 países. Trabajamos día a día para seguir ofreciendo las mejores facilidades y
+                servicios exclusivos en los cerca de 100 hoteles ubicados en 21 países. Todos ellos, además, cuentan con
+                una
+                garantía de calidad y estándar de servicio que convertirán tus vacaciones en auténticas experiencias
+                únicas.
+            </p>
+            <p>
+                ¡Sigue navegando y descubre lo mejor de RIU Hotels & Resorts!
+            </p>
+        </div>
+    </section>
+
+
+    <!--redes-->
+    <section id="contacto" class="container-fluid social-media">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="./img/riuredes.jpg" alt="Momentos en RIU" class="img-fluid">
+                </div>
+                <div class="col-md-6 text-center">
+                    <h2>¡RIU en las redes!</h2>
+                    <p>Nos encanta estar cerca de nuestros clientes, por eso compartimos los mejores momentos RIU en
+                        nuestras redes sociales. ¡Únete y muéstranos tus experiencias RIU!</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i>
+                            Facebook</a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i>
+                            Instagram</a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i>
+                            Twitter</a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Seccion newsletter-->
+    <section class="newsletter">
+        <div class="container-fluid">
+            <div class="newsletter-content">
+                <h2>¡Suscríbete a nuestro boletín!</h2>
+                <p>Recibe las últimas noticias, ofertas especiales y más directamente en tu correo electrónico.</p>
+                <form action="#" method="POST">
+                    <input type="email" placeholder="Ingresa tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/50663575378" class="whatsapp-icon" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
